@@ -1,0 +1,33 @@
+﻿<Window x:Class="WpfPhotoFilter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfPhotoFilter"
+        mc:Ignorable="d"
+        Title="Photo Filter" Height="650" Width="900">
+    <Grid Background="#555">
+        <!-- 主版面分隔 -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="290"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+        <!-- 圖片 -->
+        <Image Stretch="Uniform" x:Name="MainImage"></Image>
+        
+        <!-- 下方功能區 -->
+        <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto">
+            <StackPanel Background="#333">
+                <TextBlock Foreground="White" Padding="20" FontSize="20">Photo Filter</TextBlock>
+                <Button x:Name="OpenBtn" Click="OpenBtn_Click" Margin="20 5" Height="30">Open</Button>
+                <TextBlock Foreground="#888" Padding="20 40 0 10">Filters</TextBlock>
+                <WrapPanel Orientation="Horizontal" Margin="15 0">
+                    <local:FuncButton Margin="5" Text="Reset" x:Name="ResetFilter" MouseDown="ResetFilter_MouseDown"></local:FuncButton>
+                    <local:FuncButton Margin="5" Text="Bright" x:Name="BrightFilter" MouseDown="BrightFilter_MouseDown"></local:FuncButton>
+                    <local:FuncButton Margin="5" Text="Kernel" x:Name="KernelFilter" MouseDown="KernelFilter_MouseDown"></local:FuncButton>
+                </WrapPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>

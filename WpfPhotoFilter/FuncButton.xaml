@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="WpfPhotoFilter.FuncButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfPhotoFilter"
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="75">
+    <Grid Width="75" Height="100">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Border Background="#444" Width="75" BorderThickness="2" BorderBrush="Gray" CornerRadius="10">
+            
+        </Border>
+        
+        <TextBlock 
+            Grid.Row="1" 
+            Foreground="White" 
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center" x:Name="ButtonText">Func Name</TextBlock>
+    </Grid>
+</UserControl>
